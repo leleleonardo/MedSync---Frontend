@@ -39,11 +39,11 @@ export default function AuthProvider({ children }) {
             
             setUsuario(usuarioLogado)
 
-            const result = await api.get(`/medico/verifyapproval/${email}`)
+            /*const result = await api.get(`/medico/verifyapproval/${email}`)
             if(result.data.aguardando_validacao != null){
                 alert('Usuário Aguardando Aprovação, Você será notificado quando seu acesso for liberado!')
                 logout()
-            }
+            }*/
 
             navigate('/inicio')
         } catch (err) {

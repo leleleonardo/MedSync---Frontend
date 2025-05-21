@@ -128,16 +128,32 @@ let Login = () => {
                     </DivEsqueceuASenha>
 
                     <Div>
-                        <Button fullWidth variant="contained" size="large" onClick={formik.handleSubmit}>
-                            Login
-                        </Button>
+                    <Button
+    fullWidth
+    variant="contained"
+    size="large"
+    onClick={formik.handleSubmit}
+    sx={{
+        backgroundColor: 'green',
+        '&:hover': {
+            backgroundColor: 'darkgreen'
+        }
+    }}
+>
+    Login
+</Button>
                     </Div>
 
                 </Form>
 
-                <DivCadastreSe>
-                    Você não tem uma conta? <LinkStyled underline="hover" onClick={() => navigate('/cadastro')}> Cadastre-se</LinkStyled>
-                </DivCadastreSe>
+                <LinkStyled
+    underline="hover"
+    onClick={() => navigate('/cadastro')}
+    sx={{ color: 'darkgreen', fontWeight: 'bold' }}
+>
+    Cadastre-se
+</LinkStyled>
+
                 
             </Left>
             
